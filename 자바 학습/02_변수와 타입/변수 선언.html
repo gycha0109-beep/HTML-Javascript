@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script type="text/javascript">
+            // 1. 변수를 전역(함수 밖)에서 선언하거나, 함수 밖에서도 접근 가능하게 설정
+            var message; 
+
+            function test() {
+                message = "hi"; // 함수 내부에서 값 할당
+            }
+
+            test();
+            alert(message);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <canvas id="myCanvas" width="600" height="400" style="border:  3px solid;">
+        </canvas>
+        <script type="text/javascript">
+            var ctx = document.getElementById("myCanvas");
+            var myContext = ctx.getContext("2d");
+
+            myContext.beginPath(); // 그리기 시작
+            myContext.arc(100, 75, 50, 0, 2*Math.PI);
+            myContext.closePath();
+            myContext.stroke();
+
+            myContext.beginPath();
+            myContext.arc(250, 75, 50, 0, 1.5*Math.PI);
+            myContext.closePath();
+            myContext.fill();
+        </script>
+    </body>
+</html>

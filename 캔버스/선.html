@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+    </head>
+    <body>
+        <canvas id = "myCanvas" width="600" height="400" style="border: 3px solid;">
+        </canvas>
+        <script type="text/javascript">
+            var ctx = document.getElementById("myCanvas");
+            var myContext = ctx.getContext("2d");
+
+            myContext.beginPath(); // 선 그리겠다 선언
+            myContext.moveTo(100, 20); // 선(패스) 시작점 지정
+            myContext.lineTo(40, 120); // 꼭짓점 찍기
+            myContext.lineTo(160, 120);
+            myContext.closePath(); // 다 찍었다
+            myContext.fill();   // 면 채우기
+
+            myContext.beginPath(); // 선 그리겠다 선언
+            myContext.moveTo(300, 20); // 패스 시작점 지정
+            myContext.lineTo(200, 60); // 꼭짓점 찍기
+            myContext.lineTo(200, 120);
+            myContext.lineTo(400, 120);
+            myContext.lineTo(400, 60);
+            myContext.closePath(); // 다 찍었다
+            myContext.stroke(); // 선으로 잇기
+        </script>
+    </body>
+</html>
