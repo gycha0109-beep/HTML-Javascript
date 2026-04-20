@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8" />
     </head>
     <body>
         <script>
-            function sayHi() { // 인자 값이 없어도 호출이 가능하다
-                alert(arguments.length);
-                if(arguments.length == 1) {
-                    alert(arguments[0]);
-                }else if(arguments.length == 2) {
-                    alert(arguments[0] + ':' + arguments[1]);
-                }
-            }
-            sayHi();
-            sayHi('jihwan'); // 인자가 자동으로 추가됨
-            sayHi('jihwan', 'kildong')
+        function addTen(num) {
+        num += 10;
+        return num;
+        }
+        var count = 20;
+        var result = addTen(count);
+        alert(count);
+        alert(result);
         </script>
     </body>
 </html>
+ 

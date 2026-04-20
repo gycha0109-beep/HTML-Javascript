@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var stringValue = "hello world!";
+            alert(stringValue.indexOf("o"));    // 4
+            alert(stringValue.lastIndexOf("o"));  // 7
+            console.log(stringValue.indexOf("o"))
+            console.log(stringValue.lastIndexOf("o"))
+
+            var stringValue = "Lorem ipsum dolor sit amet, consectetur adipisicing elit";
+            var positions = new Array();
+            var pos = stringValue.indexOf("e");
+            
+            while(pos > -1) {
+                positions.push(pos);
+                pos = stringValue.indexOf("e", pos+1);
+            }
+            alert(positions);
+        </script>
+    </body>
+</html>

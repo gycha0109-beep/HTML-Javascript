@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+        var falseObject = new Boolean(false);
+        var result = falseObject && true;
+        document.write(result + " ");
+
+        var falseValue = false;
+        result = falseValue && true;
+        document.write(result);
+
+        alert(typeof falseObject);
+        alert(typeof falseValue);
+        alert(falseObject instanceof Boolean);
+        alert(falseValue instanceof Boolean);
+    </script>
+    </body>
+</html>
