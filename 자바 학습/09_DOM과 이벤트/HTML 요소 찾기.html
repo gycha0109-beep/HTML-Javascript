@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>My Title</title>
+    <script>
+      function process() {
+        var obj = document.getElementById("target");
+        alert(obj.value);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="myform">
+        <input type="text" id="target" name="text1">
+        <input type="submit" value="SEND" onclick="process()">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <img id="image" src="https://cdn.consumuch.com/news/photo/202208/56205_54742_245.png" width="400" height="400">
+
+    <script>
+      function changeImage() {
+        var img = document.getElementById("image");
+
+        if (img.src === "https://cdn.consumuch.com/news/photo/202208/56205_54742_245.png") {
+          img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_YOcBFpOorufc2c1o4v4P_02F_sCvWd26sw&s";
+        } else {
+          img.src = "https://cdn.consumuch.com/news/photo/202208/56205_54742_245.png";
+        }
+      }
+    </script>
+
+    <input type="button" onclick="changeImage()" value="click!"/>
+  </body>
+</html>

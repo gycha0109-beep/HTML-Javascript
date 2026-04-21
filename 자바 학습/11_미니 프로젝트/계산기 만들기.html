@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                const display = document.getElementById("Numbers");
+                const keypad = document.getElementById("keypad");
+
+                const appendValue = (value) => {
+                    display.value = display.value === "0" ? value : display.value + value;
+                };
+
+                const clearDisplay = () => {
+                    display.value = "0";
+                };
+
+                const calculate = () => {
+                    try {
+                        display.value = eval(display.value);
+                    } catch {
+                        display.value = "Error";
+                    }
+                };
+
+                keypad.addEventListener("click", (event) => {
+                    const button = event.target.closest("input[type='button']");
+                    if (!button) return;
+
+                    const { action, value } = button.dataset;
+
+                    if (action === "clear") {
+                        clearDisplay();
+                        return;
+                    }
+
+                    if (action === "calculate") {
+                        calculate();
+                        return;
+                    }
+
+                    appendValue(value);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>display</div>
+        <input type="text" id="Numbers" name="text1" value="0">
+        <br/>
+        <div id="keypad">
+            <input type="button" value="7" data-value="7"/>
+            <input type="button" value="8" data-value="8"/>
+            <input type="button" value="9" data-value="9"/>
+            <input type="button" value="+" data-value="+"/>
+            <br/>
+            <input type="button" value="4" data-value="4"/>
+            <input type="button" value="5" data-value="5"/>
+            <input type="button" value="6" data-value="6"/>
+            <input type="button" value="-" data-value="-"/>
+            <br/>
+            <input type="button" value="3" data-value="3"/>
+            <input type="button" value="2" data-value="2"/>
+            <input type="button" value="1" data-value="1"/>
+            <input type="button" value="*" data-value="*"/>
+            <br/>
+            <input type="button" value="Clear" data-action="clear"/>
+            <input type="button" value="Enter" data-action="calculate"/>
+            <input type="button" value="/" data-value="/"/>
+        </div>
+    </body>
+</html>
